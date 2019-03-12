@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+       1. npm install vue-i18n –save
+       2. 在mian.js中引入 vue-i18n
+
+                // 引入i18n国际化插件
+                import VueI18n from 'vue-i18n'
+
+                Vue.use(VueI18n)
+
+                // 注册i18n实例并引入语言文件，文件格式等下解析
+                const i18n = new VueI18n({
+                locale: 'zh',
+                messages: {
+                    'zh': require('@/assets/languages/zh.json'),
+                    'en': require('@/assets/languages/en.json')
+                }
+                })
+                //将i18n注入到vue实例中
+                new Vue({
+                el: '#app',
+                router,
+                store,
+                i18n,
+                })
+    
+        3.在创建assets/languages/en.json,assets/languages/zh.json文件：
+            zh.json   {
+              "Homepage":{
+                  "home":"首页"
+                  "login":"登录"
+                   "register":"注册"
+              }
+            }
+            en.json {
+              "Homepage":{
+                  "home":"Home"
+                  "login":"Login"
+                   "register":"Register"
+              }
+            }
+        4.在html中使用的时候 {{$t(Homepage.home)}}取值
+        5.在方法中应用 changelang(){
+                           this.$i18n.locale = this.$i18n.locale === "en"?"zh":"en" 
+   
+                    }
+     -->
+    
+</body>
+</html>
